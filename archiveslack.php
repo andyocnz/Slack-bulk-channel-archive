@@ -1,5 +1,3 @@
-
-
 <?php 
 //Replace with your token
 $json_url = "https://slack.com/api/channels.list?token=________________&pretty=1";
@@ -8,6 +6,7 @@ $json = file_get_contents($json_url);
 
 $data = json_decode($json);
 $m=count($data->channels);
+// check total channels
 echo "total channels:".$m."<br>";
 
 $k=0;
@@ -18,6 +17,7 @@ for($i=0; $i<$m; $i++) {
 $cn=$data->channels[$i]->name;
 $cn2=$data->channels[$i]->is_archived;
 
+//find all channels start with sk-
 if (strpos($cn, 'sk-') !== false and $cn2==0) {
    echo $data->channels[$i]->name."(".$cn2.") (id=";
    $cid=$data->channels[$i]->id;
