@@ -1,4 +1,4 @@
-## How can you efficiently archive these channels without having to join and archive them one by one?
+## How can you efficiently archive slack channels without having to join and archive them one by one?
  
 # What is it?
 This script helps you to clear all your Slack channels start with sk or whatever you want.
